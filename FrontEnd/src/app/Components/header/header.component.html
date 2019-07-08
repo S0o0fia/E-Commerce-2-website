@@ -1,0 +1,54 @@
+<head>
+  
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body >
+
+  <nav class="navbar navbar-expand-sm navbar-dark fixed-top" id="nav">
+    <a class="navbar-brand" href="#" id="title">
+      <img src="../../assets/Images/Logo/logo.png" />
+      <a> Chrocheto</a>
+    </a>
+
+
+    <ul class="navbar-nav">
+      <li class="nav-item" class="Category">
+        <a class="nav-link as" (click)="DirectWomen()">Women</a>
+      </li>
+
+      <li class="nav-item" class="Category">
+        <a class="nav-link as" (click)="DirectMen()">Man</a>
+      </li>
+
+      <li class="nav-item" class="Category">
+        <a class="nav-link as" (click)="DirectKids()">Kids</a>
+      </li>
+
+      <li class="nav-item" class="Category">
+        <a class="nav-link as" (click)="DirectOthers()">Others</a>
+      </li>
+    </ul>
+    <div class="Socail">  
+        <div class="social-part">
+            <!-- <i  aria-hidden="true" class="fa fa-cart-plus"  style="font-size:x-large"
+            > <a class="nav-link as" (click)="DirectRegister()"></a></i> -->
+            <a class="btn btn-primanry" id="cart" (click) = "DirectCart()" >
+                <i class="fa fa-shopping-cart"> </i> Cart
+                </a>
+          </div>
+   
+      <div class="social-part">
+      <i  aria-hidden="true"> <a class="nav-link as" (click)="DirectLogin()" id="login">{{login}}</a></i>
+    </div>
+    <div class="social-part">
+        <i  aria-hidden="true"> <a class="nav-link as" (click)="DirectRegister()" id="signup">{{signup}}</a></i>
+      </div>
+   
+  
+      
+    </div>
+ 
+  </nav>
+</body>

@@ -1,0 +1,50 @@
+<body class="body">
+    <div>
+                <form [formGroup]="userForm" (submit)="onSubmit()" style="text-align: center" id="slide2">
+                        <h3> Login</h3>
+                     
+                      
+                        <!--Email-->
+                        <label>
+                            <p class="label-txt">Email</p>
+                            <input type="email" class="input" [(ngModel)]="userservice.selecteduser.email" name="Email"
+                                ng-required="true" formControlName="Email" />
+                            <div class="line-box">
+                                <div class="line"></div>
+                            </div>
+                        </label>
+                        <!--Password-->
+                        <label>
+                            <p class="label-txt"> Password</p>
+                            <input type="password" class="input" [(ngModel)]="userservice.selecteduser.password" name="Password"
+                                ng-required="true" ng-minlength=6  formControlName="Password"/>
+                            <div class="line-box">
+                                <div class="line"></div>
+                            </div>
+                        </label>
+                        <!--Phone-->
+                     
+                        <button type="submit" [disabled]="!userForm.valid">Login</button>
+                        <br/>
+                        <button type="submit" id="signup" (click)="DirectRegister()" >or Signup</button>
+
+                    </form>  
+                </div>
+
+
+<script>
+$(document).ready(function () {
+
+    $('.input').focus(function () {
+        $(this).parent().find(".label-txt").addClass('label-active');
+    });
+
+    $(".input").focusout(function () {
+        if ($(this).val() == '') {
+            $(this).parent().find(".label-txt").removeClass('label-active');
+        };
+    });
+
+});
+</script>
+</body>

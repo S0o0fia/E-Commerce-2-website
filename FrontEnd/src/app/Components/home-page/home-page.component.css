@@ -1,0 +1,125 @@
+.Part1 {
+	width: 100%;
+	height: 30%;
+	
+}
+.Part2 {
+	
+	width: 100%;
+	height: 30%;
+	margin-top: 5%;
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url("../../../assets/Images/Logo/back1.jpg");
+	align-content: center;
+    text-align: center;
+    align-self: center;
+}
+.displaybtn
+{
+	width: 100%;
+	height: auto;
+	display: inline;
+	text-align: center;
+}
+
+.btn {
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    text-shadow: 2px 2px black;
+    padding: 1% 3%;
+   	margin-bottom: 5%;
+	font-family: cursive;
+    font-size: xx-large;
+    cursor: pointer;
+}
+
+.title {
+    font-size: 15vw;
+	text-shadow: 2px 2px black;
+	margin: 2%;
+    font-family: cursive;
+    color: white;
+   
+}
+
+.subtitle {
+    font-size: 5vw;
+    text-shadow: 2px 2px black;
+	font-family: cursive;
+	margin: 1%;
+    color: white;
+}
+.btn:hover{
+	background-color: white;
+	text-shadow: none;
+	font-family: cursive;
+	color: black;
+}
+.accordian {
+	width: 90%; height: 30%;
+	overflow: hidden;
+	
+	/*Time for some styling*/
+	margin: 7.9% auto 2% auto;
+	box-shadow: 2px 0 0 0 rgba(0, 0, 0, 0.35);
+	-webkit-box-shadow: 2px 0 0 0 rgba(0, 0, 0, 0.35);
+	-moz-box-shadow: 2px 0 0 0 rgba(0, 0, 0, 0.35);
+}
+
+/*A small hack to prevent flickering on some browsers*/
+.accordian ul {
+	width: 100%;
+	/*This will give ample space to the last item to move
+	instead of falling down/flickering during hovers.*/
+}
+
+.accordian li {
+	position: relative;
+	display: block;
+	width: 25%;
+	float: left;
+	border-left: 1px solid #888;
+	box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	
+	/*Transitions to give animation effect*/
+	transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	/*If you hover on the images now you should be able to 
+	see the basic accordian*/
+}
+
+/*Reduce with of un-hovered elements*/
+.accordian ul:hover li {width:10%;}
+/*Lets apply hover effects now*/
+/*The LI hover style should override the UL hover style*/
+.accordian ul li:hover {width:70%;}
+
+
+.accordian li img {
+    display: block;
+    height: 400px;
+    width: 100%;
+}
+
+/*Image title styles*/
+.image_title {
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	left: 0; bottom: 0;	
+width: 100%;	
+
+}
+.image_title a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	padding: 4%;
+	font-size: medium;
+}

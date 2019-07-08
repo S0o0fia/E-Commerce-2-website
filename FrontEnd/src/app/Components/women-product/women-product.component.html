@@ -1,0 +1,32 @@
+<div style="margin-top:5%" class="container">
+    <h3 class="h3">Women Products</h3>
+
+    <div class="row">
+        <div class="col-md-4 col-sm-6" *ngFor="let product of products ; let i = index" style="height: 100% ; margin-top:5%">
+            <div class="product-grid3">
+                <div class="product-image3">
+                    <a (click)="safaa(product._id)">
+                        <img style="height:300px" class="pic-1" src="../../../assets/Images/Women/{{product.image}}">
+                        <img style="height:300px" class="pic-2" src="../../../assets/Images/Women/{{product.image}}">
+                    </a>
+                    <ul class="social">
+                        <li><a (click)="DirectDetails(product.id)"><i class="fa fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+                <div class="product-content">
+                    <h3 class="title text-secondary"><a href="#" class="text-dark">{{product.name}}</a></h3>
+                    <div class="price text-secondary">
+                        {{product.price}} EGP
+                    </div>
+
+                </div>
+            </div>
+            <hr style="border: lightgray solid 1px" />
+        </div>
+    </div>
+</div>
+<mat-paginator
+[length] = "length"
+[pageSize] = "pageSize"
+(page) = "onPageChange($event)">
+</mat-paginator>

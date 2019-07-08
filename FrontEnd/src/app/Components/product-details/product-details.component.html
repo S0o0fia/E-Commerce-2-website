@@ -1,0 +1,32 @@
+<div style="margin-top:5%" class="container">
+  <h3 class="h3">Product Details</h3>
+
+  <div class="row">
+         <div class="col-md-6 col-sm-6"  style="height: 100% ; margin-top:5%">
+         <div class="product-grid3">
+              <div class="product-image3">
+                      <img style="height:400px" class="pic-1" src="../../../assets/Images/{{type}}/{{product.image}}">
+                      <img style="height:400px" class="pic-2" src="../../../assets/Images/{{type}}/{{product.image}}">
+              </div>
+         </div>
+         </div>
+              <div class="col-md-6 col-sm-6"  style="height: 100% ; margin-top:5%">
+                <h4 class="title"> Name : </h4>
+                <h3 class="title text-secondary"> {{product.name}}</h3>
+                <hr/>
+                <h4 class="title"> Description : </h4>
+                <h3 class="title text-secondary"> {{product.description}}</h3>
+                <hr/>
+                <h4 class="title">  Price :   </h4>
+                <h4 class="price text-secondary">{{product.price}} EGP </h4>
+                <hr/>
+                <!-- <h4 class="title">  Quantity :   </h4>
+               <input [(ngModel)]="selectedqunatity" id = "Quantity" type="number"  class="form-control" min="1"  max="{{product.limitQuantity}}"/>
+               <hr/> -->
+               <button (click)="AddtoCart()" class="btn btn-primary" >Add To Cart</button> 
+              </div>
+           <hr style="border: lightgray solid 1px"/>
+         </div>
+        </div>
+
+

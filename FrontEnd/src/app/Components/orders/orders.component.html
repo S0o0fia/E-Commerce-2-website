@@ -1,0 +1,54 @@
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 id="title" class="jumbotron-heading">Orders</h1>
+     </div>
+</section>
+
+<div class="container mb-4">
+    <div class="row">
+        <div class="col-12"  *ngFor="let order of orders; let key=index " >
+                <h5 >Reset Number : {{order._id}}  </h5> 
+                <h5>Date :  {{order.date}}</h5> 
+               <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product Name </th>
+                            <th scope="col" class="text-center">Quantity</th>
+                            <th scope="col" class="text-right">Unit Price</th>
+                            <th scope="col" class="text-right">Total Price</th>
+                       </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let orderdetail of ordersDeatils ; let i = index "  calss = "tr" >
+                            <td > {{products[i].name}}</td>
+                            <td > {{orderdetail.Quantity}} </td>
+                            <td  class="text-right"> {{products[i].price}} EGP</td>
+                            <td  class="text-right"> {{products[i].price * orderdetail.Quantity}} EGP</td>
+                            <td> </td>
+                     
+                        
+                         </tr>
+                      
+                         <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><strong>Total</strong></td>
+                            <td class="text-right"><strong>{{totalprice}} EGP</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+       
+    </div>
+</div>
+
+<mat-paginator
+[length] = "orders.length"
+[pageSize] = "1"
+[pageIndex] = "key"
+(page) = "onPageChange($event)">
+</mat-paginator>

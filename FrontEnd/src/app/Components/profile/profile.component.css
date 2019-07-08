@@ -1,0 +1,27 @@
+#body
+{    margin-top:10%;
+    margin-bottom: 10%;
+}
+
+img{
+
+width: 70%;
+}
+
+hr {
+    height: 1px;
+    color: #7a1656;
+    background-color: #7a1656;
+    border: none;
+}
+
+h2 {
+    padding-top: 5%;
+    font-family: cursive;
+}
+
+span{
+   color: #7a1656;
+    margin-right: 2%;
+    font-size: large;
+}

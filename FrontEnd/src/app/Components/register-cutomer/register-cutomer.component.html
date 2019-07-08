@@ -1,0 +1,106 @@
+
+
+<body>
+        <section id="page">
+            <div id="slide1">
+                             
+                    <img src="../../assets/Images/Logo/back2.jpg" width="100%" height="auto"/>
+                    
+    
+            </div>
+            <form [formGroup]="userForm" (submit)="onSubmit()" style="text-align: center" id="slide2">
+                            <h3> SignUp</h3>
+                            <!--FullName-->
+                            <label>
+                                <p class="label-txt">Full Name </p>
+                                <input type="text" class="input" [(ngModel)]="userservice.selecteduser.fullName" name="fullName"
+                                    ng-required="true"  formControlName="fullName"/>
+                                <div class="line-box">
+                                    <div class="line">
+                                    </div>
+                                </div>
+                             </label>
+                            <!--Username-->
+                            <label>
+                                <p class="label-txt">Username</p>
+                                <input type="text" class="input" [(ngModel)]="userservice.selecteduser.userName" name="userName"
+                                    ng-required="true" formControlName="userName" />
+                                <div class="line-box">
+                                    <div class="line"></div>
+                                </div>
+                            </label>
+                            <!--Email-->
+                            <label>
+                                <p class="label-txt">Email</p>
+                                <input type="email" class="input" [(ngModel)]="userservice.selecteduser.email" name="email"
+                                    ng-required="true" formControlName="email" />
+                                <div class="line-box">
+                                    <div class="line"></div>
+                                </div>
+                            </label>
+                            <!--Password-->
+                            <label>
+                                <p class="label-txt"> Password</p>
+                                <input type="password" class="input" [(ngModel)]="userservice.selecteduser.password" name="password"
+                                    ng-required="true" ng-minlength=6  formControlName="password"/>
+                                <div class="line-box">
+                                    <div class="line"></div>
+                                </div>
+                            </label>
+                            <!--Phone-->
+                            <label>
+                                <p class="label-txt"> Phone</p>
+                                <input type="text" class="input" [(ngModel)]="userservice.selecteduser.phoneNumber" name="phoneNumber"
+                                    ng-required="true" ng-minlength=11 ng-maxlength=11  formControlName="phoneNumber"/>
+                                <div class="line-box">
+                                    <div class="line"></div>
+                                </div>
+                            </label>
+                            <!--country-->
+                            <label>
+                                <p class="label-txt">Country</p>
+                                <br>
+                                 <select formControlName="country" id="Country" class="form-control" (change)="getCity($event.target.value)" >
+                                    <option  *ngFor="let C of country; let i = index" [value]="C.id" >
+
+                                               {{C.name}}
+                                    </option>
+                                  </select>                               
+                                <div class="line-box">
+                                 <div class="line"></div>
+                                </div>
+                            </label>
+                            <!--City-->
+                            <label>
+                                <p class="label-txt">City</p>
+                                <br>
+                                 <select formControlName="city" id="City" class="form-control" (change)="getCty($event.target.value)">
+                                    <option  *ngFor="let Cty of city; let i = index" [value]="Cty.id">
+                                      {{Cty.name}}
+                                    </option>
+                                  </select>                               
+                                <div class="line-box">
+                                 <div class="line"></div>
+                                </div>
+                            </label>
+                            <button type="submit" [disabled]="!userForm.valid">Signup</button>
+                        </form>  
+               
+       </section> 
+    
+    <script>
+    $(document).ready(function () {
+    
+        $('.input').focus(function () {
+            $(this).parent().find(".label-txt").addClass('label-active');
+        });
+    
+        $(".input").focusout(function () {
+            if ($(this).val() == '') {
+                $(this).parent().find(".label-txt").removeClass('label-active');
+            };
+        });
+    
+    });
+    </script>
+    </body>

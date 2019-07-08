@@ -1,0 +1,45 @@
+img {
+    width: 20%;
+    height: 20%;
+}
+
+.Category{
+    width:50%;
+    margin-left: 20%;
+    height: 100%;
+  
+}
+#cart
+{
+    background: #7a1656;
+    border-color: whitesmoke;
+
+}
+
+.as{
+    font-family: cursive ;
+    margin-left: 1% ;
+    color:black;
+}
+ 
+#title
+{
+    width: 20%;
+}
+
+
+#nav {
+    background-color: #7a1656;
+}
+
+.social-part
+{
+    float: right;
+    display: inline;
+    color: white;
+}
+
+.Socail
+{
+    margin-left: 35%;
+}
